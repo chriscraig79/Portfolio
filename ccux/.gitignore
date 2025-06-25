@@ -1,0 +1,28 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby dependencies
+vendor/
+
+# Node.js dependencies
+node_modules/
+
+# Generated CSS is built by GitHub Actions
+
+# OS files
+.DS_Store
+.DS_Store?
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
