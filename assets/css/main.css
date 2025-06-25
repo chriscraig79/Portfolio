@@ -541,6 +541,9 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.h-full {
+  height: 100%;
+}
 .max-w-none {
   max-width: none;
 }
