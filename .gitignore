@@ -12,6 +12,7 @@ vendor/
 node_modules/
 
 # Generated CSS is built by GitHub Actions
+assets/css/main.css
 
 # OS files
 .DS_Store
