@@ -9,6 +9,7 @@ module.exports = {
     "./about.markdown",
     "./index.markdown"
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
