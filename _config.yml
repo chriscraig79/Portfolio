@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Crafting accessible, user-centered experiences through research, concept development, and in-browser prototyping.
   
 
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/Portfolio" # the subpath of your site, e.g. /blog
 url: "https://ccux.design" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
