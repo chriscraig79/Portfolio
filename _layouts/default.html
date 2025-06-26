@@ -1,29 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full antialiased light">
+<html lang="en" class="h-full antialiased dark:[color-scheme:dark]">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
   <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body class="flex h-full bg-zinc-50 dark:bg-black">
   <div class="flex w-full">
-    <div class="fixed inset-0 flex justify-center sm:px-8"><div class="flex w-full max-w-7xl lg:px-8"><div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div></div></div>
+    <div class="fixed inset-0 flex justify-center sm:px-8">
+      <div class="flex w-full max-w-7xl lg:px-8">
+        <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+      </div>
+    </div>
     <div class="relative flex w-full flex-col">
-
-      <header class="p-12 bg-gray-100">
-        <h1 class="text-2xl font-bold"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-        </header>
-      <main class="p-4">
+      <header class="pointer-events-none relative z-50 flex flex-none flex-col">
+        <div class="top-0 z-10 h-16 pt-6">
+          <div class="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full">
+            <div class="mx-auto w-full max-w-7xl lg:px-8">
+              <div class="relative px-4 sm:px-8 lg:px-12">
+                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                  <div class="relative flex gap-4">
+                    <div class="flex flex-1">
+                      <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10">
+                        <a aria-label="Home" class="pointer-events-auto" href="{{ '/' | relative_url }}">
+                          <img alt="" class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9" src="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='100'%20height='100'%20fill='%23ddd'/%3e%3ctext%20x='50'%20y='50'%20font-size='50'%20text-anchor='middle'%20dy='.3em'%3eC%3c/text%3e%3c/svg%3e">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex flex-1 justify-end md:justify-center">
+                      <nav class="pointer-events-auto md:block">
+                        <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+                          <li><a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" href="#about">About</a></li>
+                          <li><a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" href="#articles">Articles</a></li>
+                          <li><a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" href="#projects">Projects</a></li>
+                          <li><a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" href="#speaking">Speaking</a></li>
+                          <li><a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" href="#uses">Uses</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="flex-auto">
         {{ content }}
       </main>
-      <footer class="p-4 bg-gray-100 text-center text-sm">
-        &copy; {{ site.time | date: "%Y" }} {{ site.title }}
+      <footer class="mt-32 flex-none">
+        <div class="sm:px-8">
+          <div class="mx-auto w-full max-w-7xl lg:px-8">
+            <div class="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
+              <div class="relative px-4 sm:px-8 lg:px-12">
+                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                  <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                      <a class="transition hover:text-teal-500 dark:hover:text-teal-400" href="#about">About</a>
+                      <a class="transition hover:text-teal-500 dark:hover:text-teal-400" href="#projects">Projects</a>
+                      <a class="transition hover:text-teal-500 dark:hover:text-teal-400" href="#speaking">Speaking</a>
+                      <a class="transition hover:text-teal-500 dark:hover:text-teal-400" href="#uses">Uses</a>
+                    </div>
+                    <p class="text-sm text-zinc-400 dark:text-zinc-500">© {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
-
     </div>
-    
   </div>
-  
 </body>
 </html>
