@@ -11,8 +11,8 @@ vendor/
 # Node.js dependencies
 node_modules/
 
-# Generated CSS is built by GitHub Actions
-assets/css/main.css
+# Generated CSS is built locally and committed
+# assets/css/main.css
 
 # OS files
 .DS_Store
