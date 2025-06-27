@@ -549,6 +549,9 @@ video {
 .pointer-events-auto {
   pointer-events: auto;
 }
+.static {
+  position: static;
+}
 .fixed {
   position: fixed;
 }
@@ -678,6 +681,9 @@ video {
 }
 .min-h-32 {
   min-height: 8rem;
+}
+.min-h-40 {
+  min-height: 10rem;
 }
 .w-10 {
   width: 2.5rem;

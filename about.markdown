@@ -3,6 +3,7 @@ layout: page
 title: About
 heading: Designer at heart but love to code
 cv: true
+img: data:image/svg+xml,%3csvg%20width='400'%20height='400'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='400'%20height='400'%20fill='%23e5e5e5'/%3e%3ctext%20x='200'%20y='200'%20font-size='24'%20text-anchor='middle'%20dy='.3em'%3eYour Photo%3c/text%3e%3c/svg%3e
 ---
 
 Problem solving drives me. Great design always starts with deeply understanding the problem and whom it belongs to. 
