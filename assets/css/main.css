@@ -667,6 +667,18 @@ video {
 .h-px {
   height: 1px;
 }
+.min-h-10 {
+  min-height: 2.5rem;
+}
+.min-h-12 {
+  min-height: 3rem;
+}
+.min-h-24 {
+  min-height: 6rem;
+}
+.min-h-32 {
+  min-height: 8rem;
+}
 .w-10 {
   width: 2.5rem;
 }

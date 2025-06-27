@@ -21,7 +21,7 @@
 email: chriscraig79@gmail.com
 title: CCUX
 description: >- # this means to ignore newlines until "baseurl:"
-  Crafting accessible, user-centered experiences through research, concept development, and in-browser prototyping.
+  Crafting accessible, user-centered experiences through research, concept development, and HTML prototyping.
   
 
 baseurl: "/Portfolio" # the subpath of your site, e.g. /blog
