@@ -150,48 +150,31 @@
 <script>
   
   const prefix = "I'm Chris — A product designer ";
-const phrases = [
-  "owning concepts to production code",
-  "owning concepts to prototypes",
-  "owning discovery to production code",
-  "owning discovery to prototypes",
-  "owning hypotheses to production code",
-  "owning hypotheses to prototypes",
-  "owning requirements to production code",
-  "owning requirements to prototypes",
-  "shaping concepts to production code",
-  "shaping concepts to prototypes",
-  "shaping discovery to production code",
-  "shaping discovery to prototypes",
-  "shaping hypotheses to production code",
-  "shaping hypotheses to prototypes",
-  "shaping requirements to production code",
-  "shaping requirements to prototypes",
-  "validating concepts to production code",
-  "validating concepts to prototypes",
-  "validating discovery to production code",
-  "validating discovery to prototypes",
-  "validating hypotheses to production code",
-  "validating hypotheses to prototypes",
-  "validating requirements to production code",
-  "validating requirements to prototypes"
+  const phrases = [
+    "running user research & interviews",
+    "developing UX concepts & wireframes",
+    "validating hypotheses with real users",
+    "collaborating with stakeholders & devlopers",
+    "presenting research insights & design recommendations",
+    "building HTML prototypes with contextual user scenarios",
+    "testing usability & accessibility against WCAG standards",
+    "crafting responsive interfaces & interactions",
+    "implementing & maintaining design systems",
+    "integrating AI into design workflows",
 ];
 
-let lastIndex = -1;
+let currentIndex = 0;
 let current   = "";  // only the dynamic part
 const el       = document.getElementById("tagline");
 
 // respect prefers-reduced-motion
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// pick a random phrase, never repeating the last one
-function getRandomPhrase() {
-  let idx;
-  do {
-    idx = Math.floor(Math.random() * phrases.length);
-  } while (idx === lastIndex);
-  lastIndex = idx;
-  return phrases[idx];
+// get next phrase in order, cycling back to start
+function getNextPhrase() {
+  const phrase = phrases[currentIndex];
+  currentIndex = (currentIndex + 1) % phrases.length;
+  return phrase;
 }
 
 // render the content with a visually-hidden span for screen readers
@@ -223,7 +206,7 @@ function typeDynamic(next, cb) {
 
 // full cycle: delete → pause 1s → type → pause 3s → repeat
 function updateTagline() {
-  const next = getRandomPhrase();
+  const next = getNextPhrase();
   deleteDynamic(() => {
     setTimeout(() => {
       typeDynamic(next, () => {
@@ -236,7 +219,7 @@ function updateTagline() {
 // initialize
 if (reduceMotion) {
   // on reduced motion, show one static phrase only
-  const phrase = getRandomPhrase();
+  const phrase = getNextPhrase();
   el.textContent = prefix + phrase + ".";
 } else {
   render();

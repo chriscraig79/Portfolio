@@ -5,7 +5,8 @@
 layout: home
 title: Chris Craig UX
 strapline: I'm Chris — A product designer
-description: >- # this means to ignore newlines until "baseurl:"
-  I bridge user research, UX design and front-end development to craft accessible, user-centered experiences. By validating HTML prototypes before hand-off, I ensure hypotheses are tested under real-world conditions, reducing rework downstream.
+description: >- # this means to ignore newlines"
+  I bridge user research, UX design and front-end development to craft accessible, user-centered experiences. 
+  Validating concepts and evaluating prototypes with real users before hand-off to ensure hypotheses hold up under real-world conditions, reducing rework downstream.
 ---
 hello handsome boy wonder 

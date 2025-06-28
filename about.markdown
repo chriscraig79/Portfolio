@@ -8,7 +8,7 @@ img: data:image/svg+xml,%3csvg%20width='400'%20height='400'%20xmlns='http://www.
 
 Problem solving drives me. Great design always starts with deeply understanding the problem and whom it belongs to. 
 
-Whether mapping user journeys, developing concepts, or running usability tests, my aim is empathy for users paired with data insights that align with business needs.
+Whether mapping user journeys, developing concepts, or running usability tests, my aim is empathy for users paired with data insights and alignment with business needs.
 
 I've embraced AI in my daily workflow for everything from research to prototype generation. This empowers me to go further and simulate real-world use cases and scenarios, and even generating production-ready JavaScript that once required developer support.
 
