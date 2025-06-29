@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blink-dot {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    0%, 50%   { opacity: 1; }
+    50.01%,100% { opacity: 0; }
+}
+
+@layer base {
+  body::after {
+    content: "none";
+    display: none;   /* we don’t actually want to see it */
+  }
+  @screen sm { body::after { content: "sm"; } }
+  @screen md { body::after { content: "md"; } }
+  @screen lg { body::after { content: "lg"; } }
+  @screen xl { body::after { content: "xl"; } }
+  @screen 2xl { body::after { content: "2xl"; } }
+}
