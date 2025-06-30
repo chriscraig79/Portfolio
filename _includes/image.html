@@ -1,6 +1,6 @@
-<div class="block my-6 not-prose w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] lg:px-12 lg:-mx-52 lg:w-auto lg:left-auto lg:right-auto">
-  <div class="aspect-video lg:rounded-2xl bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
-    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: 'Project image' }}" class="w-full h-full object-cover">
+<div class=" block my-6 not-prose w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] lg:px-12 lg:-mx-52 lg:w-auto lg:left-auto lg:right-auto">
+  <div class="ring-zinc-200 ring-1 lg:shadow-lg lg:rounded-xl bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: 'Project image' }}" class="w-full h-auto object-contain">
   </div>
   {% if include.caption %}
   <p class="mt-4 text-sm text-zinc-600 dark:text-zinc-400 text-center px-4 sm:px-8 lg:px-12">{{ include.caption }}</p>
