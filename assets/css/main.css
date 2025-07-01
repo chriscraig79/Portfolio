@@ -1659,6 +1659,10 @@ video {
   fill: #a1a1aa;
 }
 
+.dark\:fill-zinc-700:is(.dark *) {
+  fill: #3f3f46;
+}
+
 .dark\:stroke-zinc-500:is(.dark *) {
   stroke: #71717a;
 }
