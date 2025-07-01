@@ -1,0 +1,205 @@
+<div class="carousel-container block my-6 not-prose w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] sm:w-auto sm:left-auto sm:right-auto sm:relative sm:ml-0 sm:mr-0 lg:px-12 lg:-mx-52 lg:w-auto lg:left-auto lg:right-auto">
+  
+  <!-- Count total images first -->
+  {% assign total_images = 0 %}
+  {% for i in (1..20) %}
+    {% assign src_param = 'image' | append: i | append: '_src' %}
+    {% assign image_src = include[src_param] %}
+    {% if image_src %}
+      {% assign total_images = total_images | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  
+  <div class="ring-zinc-200 ring-1 sm:shadow-lg sm:rounded-md lg:rounded-xl bg-zinc-100 dark:bg-zinc-800 relative">
+    
+    <!-- Navigation Arrows (positioned relative to image container) -->
+    {% if total_images > 1 %}
+      <button type="button" 
+              class="carousel-prev group absolute left-8 xl:-left-16 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 flex items-center justify-center z-10"
+              aria-label="Previous image">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
+             class="h-3 w-3 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600 dark:fill-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400">
+          <path d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      
+      <button type="button" 
+              class="carousel-next group absolute right-8 xl:-right-16 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 flex items-center justify-center z-10"
+              aria-label="Next image">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
+             class="h-3 w-3 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600 dark:fill-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400">
+          <path d="m8.75 4.75 3.5 3.25m0 0-3.5 3.25m3.5-3.25H3.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    {% endif %}
+    
+    <!-- Images Container -->
+    <div class="carousel-images relative w-full h-auto">
+      {% assign slide_index = 0 %}
+      {% for i in (1..20) %}
+        {% assign src_param = 'image' | append: i | append: '_src' %}
+        {% assign alt_param = 'image' | append: i | append: '_alt' %}
+        {% assign caption_param = 'image' | append: i | append: '_caption' %}
+        
+        {% assign image_src = include[src_param] %}
+        {% assign image_alt = include[alt_param] %}
+        {% assign image_caption = include[caption_param] %}
+        
+        {% if image_src %}
+          <div class="carousel-slide {% if slide_index == 0 %}block{% else %}hidden{% endif %}" data-slide="{{ slide_index }}">
+            <img src="{{ image_src | relative_url }}" 
+                 alt="{{ image_alt | default: 'Carousel image' }}" 
+                 class="w-full h-auto object-contain">
+          </div>
+          {% assign slide_index = slide_index | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+  </div>
+  
+  <!-- Captions -->
+  <div class="carousel-caption-container mt-4">
+    {% assign caption_index = 0 %}
+    {% for i in (1..20) %}
+      {% assign caption_param = 'image' | append: i | append: '_caption' %}
+      {% assign src_param = 'image' | append: i | append: '_src' %}
+      
+      {% assign image_caption = include[caption_param] %}
+      {% assign image_src = include[src_param] %}
+      
+      {% if image_src and image_caption %}
+        <p class="carousel-caption text-sm text-zinc-600 dark:text-zinc-400 text-center px-4 sm:px-8 lg:px-12 {% unless caption_index == 0 %}hidden{% endunless %}" 
+           data-caption="{{ caption_index }}">{{ image_caption }}</p>
+        {% assign caption_index = caption_index | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  
+  <!-- Dot Indicators -->
+  {% if total_images > 1 %}
+    <div class="carousel-indicators flex justify-center mt-4 space-x-2">
+      {% assign dot_index = 0 %}
+      {% for i in (1..20) %}
+        {% assign src_param = 'image' | append: i | append: '_src' %}
+        {% assign image_src = include[src_param] %}
+        
+        {% if image_src %}
+          <button type="button" 
+                  class="carousel-dot w-2 h-2 rounded-full transition-colors {% if dot_index == 0 %}bg-zinc-500 dark:bg-zinc-400{% else %}bg-zinc-300 dark:bg-zinc-600{% endif %}" 
+                  data-slide="{{ dot_index }}"
+                  aria-label="Go to slide {{ dot_index | plus: 1 }}"></button>
+          {% assign dot_index = dot_index | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousels = document.querySelectorAll('.carousel-container');
+  
+  carousels.forEach(function(carousel) {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const captions = carousel.querySelectorAll('.carousel-caption');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const transitionType = carousel.dataset.transition || 'slide';
+    
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+      // Hide all slides and captions
+      slides.forEach(function(slide) {
+        slide.classList.add('hidden');
+        slide.classList.remove('block');
+      });
+      
+      captions.forEach(function(caption) {
+        caption.classList.add('hidden');
+      });
+      
+      // Update dots
+      dots.forEach(function(dot, i) {
+        if (i === index) {
+          dot.classList.remove('bg-zinc-300', 'dark:bg-zinc-600');
+          dot.classList.add('bg-zinc-500', 'dark:bg-zinc-400');
+        } else {
+          dot.classList.remove('bg-zinc-500', 'dark:bg-zinc-400');
+          dot.classList.add('bg-zinc-300', 'dark:bg-zinc-600');
+        }
+      });
+      
+      // Show current slide and caption
+      if (slides[index]) {
+        slides[index].classList.remove('hidden');
+        slides[index].classList.add('block');
+      }
+      if (captions[index]) {
+        captions[index].classList.remove('hidden');
+      }
+      
+      currentSlide = index;
+    }
+    
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+    
+    function prevSlide() {
+      const prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+    
+    // Event listeners
+    if (nextBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', prevSlide);
+    }
+    
+    dots.forEach(function(dot, index) {
+      dot.addEventListener('click', function() {
+        showSlide(index);
+      });
+    });
+    
+    // Keyboard navigation
+    carousel.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+    });
+    
+    // Touch/swipe support
+    let startX = 0;
+    let endX = 0;
+    
+    carousel.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+    });
+    
+    carousel.addEventListener('touchend', function(e) {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > 50) { // Minimum swipe distance
+        if (diff > 0) {
+          nextSlide(); // Swipe left = next
+        } else {
+          prevSlide(); // Swipe right = prev
+        }
+      }
+    });
+  });
+});
+</script>
