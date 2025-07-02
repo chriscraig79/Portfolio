@@ -9,70 +9,66 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body class="flex h-full bg-zinc-50 dark:bg-black">
-  <div class="flex w-full">
+  
     <div class="fixed inset-0 flex justify-center sm:px-8">
       <div class="flex w-full max-w-7xl lg:px-8">
         <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
       </div>
     </div>
-    <div class="relative w-full">
-      <header class="pointer-events-none relative z-50 flex flex-none flex-col">
-        <div class="top-0 z-10 h-16 pt-6">
-          <div class="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full">
-            <div class="mx-auto w-full max-w-7xl lg:px-8">
-              <div class="relative px-4 sm:px-8 lg:px-12">
-                <div class="mx-auto max-w-2xl lg:max-w-5xl">
-                  <div class="relative flex gap-4">
-                    <!--logo-->
-                        <a aria-label="Home" class="h-8 w-8 pointer-events-auto" href="{{ '/' | relative_url }}">
-                         <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="-0.5 -0.5 34 36"
-                            shape-rendering="geometricPrecision"
-                            style="image-rendering: auto; image-rendering: optimizeQuality;"
-                            fill="none">
-                            <defs>
-                              <filter id="soft"><feGaussianBlur stdDeviation="0.2"/></filter>
-                            </defs>                            
-                            <path d="M17.8145 0.0849686V0.0840947C17.8232 0.0840731 17.8319 0.0849764 17.8406 0.0849686C17.8553 0.0852803 17.8701 0.0846131 17.8848 0.0849686L17.884 0.0858424C21.0509 0.0914406 24.2193 1.01916 26.8965 2.74321L26.8974 2.74234C27.8187 3.33324 28.6821 4.01375 29.4721 4.77053H29.4713C30.5264 5.78096 31.4518 6.92821 32.217 8.17853L32.3351 8.38301C32.9 9.41728 33.0654 10.6286 32.7926 11.7823C32.5016 13.0127 31.7365 14.0759 30.6666 14.7385C29.5969 15.4009 28.3093 15.6093 27.0875 15.317C25.8657 15.0246 24.8089 14.2553 24.1499 13.1787C23.8141 12.63 23.4056 12.1226 22.9397 11.6765H22.9389C22.5901 11.3424 22.2091 11.0422 21.8043 10.7826L21.8008 10.7808C20.6255 10.0246 19.2326 9.61605 17.8258 9.61863H17.7902L17.7546 9.61776C13.9047 9.52185 10.3021 13.1493 10.3976 17.0157L10.3993 17.0822L10.3976 17.1486C10.3021 21.015 13.9047 24.6425 17.7546 24.5465L17.7902 24.5457H17.8258C19.2189 24.5482 20.5983 24.1483 21.7661 23.4062L21.7696 23.4036C22.1873 23.1389 22.5801 22.8314 22.9389 22.4878H22.9397C23.4056 22.0417 23.8141 21.5343 24.1499 20.9856L24.2783 20.7873C24.942 19.8146 25.9421 19.1214 27.0875 18.8473C28.233 18.5733 29.4361 18.7393 30.4635 19.307L30.6666 19.4258L30.8637 19.5543C31.7659 20.177 32.4268 21.0955 32.7327 22.1531L32.7926 22.382L32.8412 22.6136C33.0415 23.6965 32.8623 24.816 32.3351 25.7813L32.217 25.9858C31.4519 27.2359 30.5271 28.3835 29.4721 29.3938C28.6594 30.1723 27.7694 30.8701 26.8184 31.4727L26.8175 31.4718C24.1572 33.164 21.0193 34.0728 17.884 34.0785L17.8848 34.0793C17.8614 34.0799 17.838 34.0798 17.8145 34.0802V34.0793C8.76179 34.2549 0.74553 26.1935 0.924069 17.0822C0.745533 7.97076 8.76179 -0.090595 17.8145 0.0849686ZM17.8215 2.76855C10.239 2.58585 3.40833 9.45568 3.58998 17.0822C3.40833 24.7086 10.239 31.5785 17.8215 31.3958C20.478 31.4022 23.1475 30.6328 25.3973 29.2007C26.1982 28.6933 26.9486 28.1055 27.6335 27.4495C28.4116 26.7044 29.1057 25.8705 29.6987 24.9686L29.947 24.5771C30.2348 24.1068 30.3249 23.5406 30.1979 23.0033C30.0707 22.4661 29.7366 22.0013 29.269 21.7118C28.8015 21.4224 28.2388 21.3316 27.7047 21.4592C27.1704 21.5871 26.7079 21.923 26.4199 22.3934C25.9632 23.1397 25.4093 23.8271 24.7775 24.4321C24.2908 24.8983 23.7577 25.3157 23.1898 25.6756C21.5922 26.6909 19.7172 27.2334 17.8215 27.2301C12.5332 27.3621 7.74983 22.6364 7.72904 17.3347L7.73165 17.0822C7.59831 11.6789 12.4494 6.80007 17.8215 6.93418C19.7361 6.93074 21.6297 7.4839 23.2375 8.51846C23.7877 8.87136 24.3044 9.27904 24.7775 9.73223C25.4093 10.3373 25.9632 11.0246 26.4199 11.7709C26.7079 12.2413 27.1704 12.5772 27.7047 12.7051C28.1721 12.8168 28.6611 12.7608 29.0893 12.5513L29.269 12.4525C29.6782 12.1991 29.9851 11.8114 30.1406 11.3585L30.1979 11.161C30.3091 10.6907 30.2544 10.198 30.0459 9.76719L29.947 9.58717C29.3832 8.66599 28.7155 7.80996 27.9617 7.03991L27.6335 6.71484C26.9677 6.07708 26.2399 5.50406 25.4642 5.00647C23.3415 3.63841 20.8394 2.86248 18.3241 2.77642L17.8215 2.76855Z" fill="currentColor"/>
-                          </svg>
-                        </a>
+    <div class="w-full">
+      <header class="h-16 pt-6 sm:px-8 w-full">
+        <div class="mx-auto w-full max-w-7xl lg:px-8">
+          <div class="relative px-4 sm:px-8 lg:px-12">
+            <div class="mx-auto max-w-2xl lg:max-w-5xl">
+              <div class="relative flex gap-4">
+                <!--logo-->
+                    <a aria-label="Home" class="h-8 w-8 pointer-events-auto" href="{{ '/' | relative_url }}">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-0.5 -0.5 34 36"
+                        shape-rendering="geometricPrecision"
+                        style="image-rendering: auto; image-rendering: optimizeQuality;"
+                        fill="none">
+                        <defs>
+                          <filter id="soft"><feGaussianBlur stdDeviation="0.2"/></filter>
+                        </defs>                            
+                        <path d="M17.8145 0.0849686V0.0840947C17.8232 0.0840731 17.8319 0.0849764 17.8406 0.0849686C17.8553 0.0852803 17.8701 0.0846131 17.8848 0.0849686L17.884 0.0858424C21.0509 0.0914406 24.2193 1.01916 26.8965 2.74321L26.8974 2.74234C27.8187 3.33324 28.6821 4.01375 29.4721 4.77053H29.4713C30.5264 5.78096 31.4518 6.92821 32.217 8.17853L32.3351 8.38301C32.9 9.41728 33.0654 10.6286 32.7926 11.7823C32.5016 13.0127 31.7365 14.0759 30.6666 14.7385C29.5969 15.4009 28.3093 15.6093 27.0875 15.317C25.8657 15.0246 24.8089 14.2553 24.1499 13.1787C23.8141 12.63 23.4056 12.1226 22.9397 11.6765H22.9389C22.5901 11.3424 22.2091 11.0422 21.8043 10.7826L21.8008 10.7808C20.6255 10.0246 19.2326 9.61605 17.8258 9.61863H17.7902L17.7546 9.61776C13.9047 9.52185 10.3021 13.1493 10.3976 17.0157L10.3993 17.0822L10.3976 17.1486C10.3021 21.015 13.9047 24.6425 17.7546 24.5465L17.7902 24.5457H17.8258C19.2189 24.5482 20.5983 24.1483 21.7661 23.4062L21.7696 23.4036C22.1873 23.1389 22.5801 22.8314 22.9389 22.4878H22.9397C23.4056 22.0417 23.8141 21.5343 24.1499 20.9856L24.2783 20.7873C24.942 19.8146 25.9421 19.1214 27.0875 18.8473C28.233 18.5733 29.4361 18.7393 30.4635 19.307L30.6666 19.4258L30.8637 19.5543C31.7659 20.177 32.4268 21.0955 32.7327 22.1531L32.7926 22.382L32.8412 22.6136C33.0415 23.6965 32.8623 24.816 32.3351 25.7813L32.217 25.9858C31.4519 27.2359 30.5271 28.3835 29.4721 29.3938C28.6594 30.1723 27.7694 30.8701 26.8184 31.4727L26.8175 31.4718C24.1572 33.164 21.0193 34.0728 17.884 34.0785L17.8848 34.0793C17.8614 34.0799 17.838 34.0798 17.8145 34.0802V34.0793C8.76179 34.2549 0.74553 26.1935 0.924069 17.0822C0.745533 7.97076 8.76179 -0.090595 17.8145 0.0849686ZM17.8215 2.76855C10.239 2.58585 3.40833 9.45568 3.58998 17.0822C3.40833 24.7086 10.239 31.5785 17.8215 31.3958C20.478 31.4022 23.1475 30.6328 25.3973 29.2007C26.1982 28.6933 26.9486 28.1055 27.6335 27.4495C28.4116 26.7044 29.1057 25.8705 29.6987 24.9686L29.947 24.5771C30.2348 24.1068 30.3249 23.5406 30.1979 23.0033C30.0707 22.4661 29.7366 22.0013 29.269 21.7118C28.8015 21.4224 28.2388 21.3316 27.7047 21.4592C27.1704 21.5871 26.7079 21.923 26.4199 22.3934C25.9632 23.1397 25.4093 23.8271 24.7775 24.4321C24.2908 24.8983 23.7577 25.3157 23.1898 25.6756C21.5922 26.6909 19.7172 27.2334 17.8215 27.2301C12.5332 27.3621 7.74983 22.6364 7.72904 17.3347L7.73165 17.0822C7.59831 11.6789 12.4494 6.80007 17.8215 6.93418C19.7361 6.93074 21.6297 7.4839 23.2375 8.51846C23.7877 8.87136 24.3044 9.27904 24.7775 9.73223C25.4093 10.3373 25.9632 11.0246 26.4199 11.7709C26.7079 12.2413 27.1704 12.5772 27.7047 12.7051C28.1721 12.8168 28.6611 12.7608 29.0893 12.5513L29.269 12.4525C29.6782 12.1991 29.9851 11.8114 30.1406 11.3585L30.1979 11.161C30.3091 10.6907 30.2544 10.198 30.0459 9.76719L29.947 9.58717C29.3832 8.66599 28.7155 7.80996 27.9617 7.03991L27.6335 6.71484C26.9677 6.07708 26.2399 5.50406 25.4642 5.00647C23.3415 3.63841 20.8394 2.86248 18.3241 2.77642L17.8215 2.76855Z" fill="currentColor"/>
+                      </svg>
+                    </a>
 
-                    <!--menu-->
-                    <div class="flex flex-1 justify-center">
-                        <nav class="pointer-events-auto md:block">
-                          <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-                            <li><a class="relative block px-3 py-2 transition {% if page.url contains 'about' %}text-teal-500 dark:text-teal-400{% else %}hover:text-teal-500 dark:hover:text-teal-400{% endif %}" href="{{ '/about' | relative_url }}">About{% if page.url contains 'about' %}<span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>{% endif %}</a></li>
-                            <li><a class="relative block px-3 py-2 transition {% if page.url contains 'articles' %}text-teal-500 dark:text-teal-400{% else %}hover:text-teal-500 dark:hover:text-teal-400{% endif %}" href="{{ '/articles' | relative_url }}">Articles{% if page.url contains 'articles' %}<span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>{% endif %}</a></li>
-                            <li><a class="relative block px-3 py-2 transition {% if page.url contains 'projects' %}text-teal-500 dark:text-teal-400{% else %}hover:text-teal-500 dark:hover:text-teal-400{% endif %}" href="{{ '/projects' | relative_url }}">Projects{% if page.url contains 'projects' %}<span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>{% endif %}</a></li>
-                          </ul>
-                        </nav>
-                    </div>
-                    <!--Theme toggle-->
-                    <div class="pointer-events-auto">
-
-                        <button type="button" id="theme-toggle" aria-label="Toggle dark mode" class="group flex items-center justify-center h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
-                          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path>
-                          </svg>
-                          <svg viewBox="0 0 24 24" aria-hidden="true" class="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500">
-                            <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                        </button>
-
-                    </div>
-
-                  </div>
+                <!--menu-->
+                <div class="flex flex-1 justify-center">
+                    <nav class="pointer-events-auto md:block">
+                      <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+                        <li><a class="relative block px-3 py-2 transition {% if page.url contains 'about' %}text-teal-500 dark:text-teal-400{% else %}hover:text-teal-500 dark:hover:text-teal-400{% endif %}" href="{{ '/about' | relative_url }}">About{% if page.url contains 'about' %}<span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>{% endif %}</a></li>
+                        <li><a class="relative block px-3 py-2 transition {% if page.url contains 'articles' %}text-teal-500 dark:text-teal-400{% else %}hover:text-teal-500 dark:hover:text-teal-400{% endif %}" href="{{ '/articles' | relative_url }}">Articles{% if page.url contains 'articles' %}<span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>{% endif %}</a></li>
+                        <li><a class="relative block px-3 py-2 transition {% if page.url contains 'projects' %}text-teal-500 dark:text-teal-400{% else %}hover:text-teal-500 dark:hover:text-teal-400{% endif %}" href="{{ '/projects' | relative_url }}">Projects{% if page.url contains 'projects' %}<span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>{% endif %}</a></li>
+                      </ul>
+                    </nav>
                 </div>
+                <!--Theme toggle-->
+                <div class="pointer-events-auto">
+
+                    <button type="button" id="theme-toggle" aria-label="Toggle dark mode" class="group flex items-center justify-center h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
+                      <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" aria-hidden="true" class="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500">
+                        <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+
+                </div>
+
               </div>
             </div>
           </div>
         </div>
       </header>
-      <main class="flex-auto">
+      <main>
         {{ content }}
       </main>
-      <footer class="mt-32 flex-none">
+      <footer class="mt-32">
         <div class="sm:px-8">
           <div class="mx-auto w-full max-w-7xl lg:px-8">
             <div class="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
@@ -102,7 +98,7 @@
         </div>
       </footer>
     </div>
-  </div>
+
 
   <script>
     // Set theme based on system preference or localStorage
