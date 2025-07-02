@@ -9,22 +9,21 @@ image_alt: Confidential reporting system interface mockup
 
 Through customer interviews and workshops, I gathered direct insights from users, uncovering the key challenges faced by whistleblowers and the organisations managing their reports.
 
+{% include image.html src="https://whimuc.com/X4BJtkAZcZbFcHMKRvyuQL/6Qh7k4NUDorMZT.png" alt="Whistleblower user journey mapping challenges and oppartunities " caption="User journey mapping challenges and oppartunites throughout the Whistleblowing and reporting process" %}
+
 ## Whistleblower Challenges
 Whistleblowers often fear retaliation or exposure, which discourages them from reporting issues. They also experience frustration due to a lack of updates or the inability to provide further details and remain anonymous, making the process feel ineffective. Additionally, they are concerned about the security of their reports and personal information. Language barriers and accessibility challenges further hinder their ability to report concerns.
-{% include image.html src="https://whimuc.com/X4BJtkAZcZbFcHMKRvyuQL/6Qh7k4NUDorMZT.png" alt="Whistleblower user journey mapping challenges and oppartunities " caption="Whistleblower challenges and oppartunities user journey map" %}
 
 ## Organisational Challenges
 Organisations, on the other hand, struggle to act on suspected wrongdoing when they lack sufficient evidence or cannot contact whistleblowers for clarification. They face pressure to meet regulatory and industry compliance standards to avoid penalties and require a scalable whistleblowing mechanism to grow with the organisation. Managing whistleblowing reports is often complex and time-consuming, leading to delays in addressing issues. Moreover, limited information restricts their ability to proactively manage risks.
 
 ## Concept Validation
-Building on our research, I produced a high-level sequences diagram to validate the initial concept for a confidential reporting system acting as a proxy between the Whistleblower and the application. The flow outlines how reports submitted by whistleblowers are handled securely and anonymously by various users through the process.
+Building on my research, I created a high-level sequences diagram to get feedback and validate an initial concept for a confidential reporting system acting as a proxy between the Whistleblower and the Report management system. The flow outlines how reports submitted are handled securely by multilpe users throughout the process.
 
 {% include image.html src="https://whimuc.com/X4BJtkAZcZbFcHMKRvyuQL/7LPhbuiT6WXdU5.png" alt="Confidential reporting system process flow" caption="High-level process flow for the confidential reporting system concept" %}
 
-## UX Concept
-The concept outlines a secure and user-friendly process for whistleblowers to report concerns while maintaining their anonymity. The flow is designed to reduce barriers to reporting, ensuring users feel safe and supported throughout, ensuring the key needs are addressed, such as maintaining anonymity, enabling secure communication, and supporting efficient triage and investigation workflows.
-
-### User Interface Flow
+## UX Devlopment
+The flow is designed to reduce barriers to reporting, ensuring users feel safe and supported throughout, ensuring the key needs are addressed, such as maintaining anonymity, enabling secure communication, and supporting efficient triage and investigation workflows.
 
 {% include carousel.html 
    image1_src="https://whimuc.com/X4BJtkAZcZbFcHMKRvyuQL/32jQ1yfkXQFtxk.png"
@@ -64,7 +63,8 @@ The concept outlines a secure and user-friendly process for whistleblowers to re
    image9_caption="9. Report activity and ability for users to provide additional information" %}
 
 ### Mobile Interface Examples
-{% include image.html src="https://whimuc.com/X4BJtkAZcZbFcHMKRvyuQL/13LsUK5GEVrxko.png" alt="Additional mobile interface example" caption="Additional mobile interface examples" %}
+Research suggested that reporters are more likely to use their personal mobile device to submit a report, away from their work laptop or device.
+{% include image.html src="https://whimuc.com/X4BJtkAZcZbFcHMKRvyuQL/13LsUK5GEVrxko.png" alt="Mobile interface example" caption="Mobile interface examples" %}
 
 ---
 
