@@ -9,4 +9,10 @@ description: >- # this means to ignore newlines"
   I bridge user research, UX design and front-end development to craft accessible, user-centered experiences. 
   Validating concepts and evaluating prototypes with real users before hand-off to ensure hypotheses hold up under real-world conditions, reducing rework downstream.
 ---
-hello handsome boy wonder 
+## Projects
+- Whistleblower Confidential Reporting
+- Watchlists
+- Entity Triage
+- User Management?
+- Workflow Automation?
+- Redaction?
