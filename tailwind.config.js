@@ -3,11 +3,11 @@ module.exports = {
   content: [
     "./_layouts/**/*.html",
     "./_includes/**/*.html", 
-    "./_posts/**/*.{md,markdown}",
-    "./*.{html,markdown}",
-    "./_pages/**/*.{md,markdown}",
-    "./about.markdown",
-    "./index.markdown"
+    "./_posts/**/*.md",
+    "./*.{html,md}",
+    "./_pages/**/*.md",
+    "./about.md",
+    "./index.md"
   ],
   darkMode: 'class',
   theme: {
