@@ -4,10 +4,8 @@ module.exports = {
     "./_layouts/**/*.html",
     "./_includes/**/*.html", 
     "./_posts/**/*.{md,markdown}",
-    "./*.{html,markdown}",
+    "./*.{html,md,markdown}",
     "./_pages/**/*.{md,markdown}",
-    "./about.markdown",
-    "./index.markdown"
   ],
   darkMode: 'class',
   theme: {
